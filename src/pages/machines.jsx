@@ -8,10 +8,14 @@ const Machines = function ({machine}) {
     
     const [Searched,SetSearched]=useState('')
     
+
     const [statusFilter,setStatusFilter] = useState('all')
 
     const visible = machine.filter((e) =>
-        e.name.toLowerCase().includes(Searched.toLowerCase()) &&
+
+       
+     e.name.toLowerCase().includes(Searched.toLowerCase()) &&
+        
         (statusFilter === 'all' || e.status === statusFilter))
     return (<>
         
