@@ -15,7 +15,7 @@ function App(){
   const [machine, setMachine] = useState([])
 
   useEffect(() => {
-    fetch("/public/machine.json").then(res=>res.json()).then(data=>setMachine(data))
+    fetch("/machine.json").then(res=>res.json()).then(data=>setMachine(data))
     },[])
 
   return (
