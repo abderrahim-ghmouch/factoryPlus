@@ -23,8 +23,10 @@ function App(){
 
      <>
 
-    <Nav/>  
-    <Routes>
+      <Nav />   
+      
+      <Routes>
+        
     <Route path='/' element={<Dashboard machine={machine}/>}/>
       
       <Route path='/machines' element={<Machine machine={machine}/>}/>
