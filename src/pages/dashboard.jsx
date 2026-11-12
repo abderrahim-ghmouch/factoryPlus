@@ -1,12 +1,23 @@
+import Static from "../components/static"
 
- const Dashboard =function (){
+const Dashboard = function ({machine}) {
+
     return (
         <>
-            <h1>this is the dashboard</h1>
-       
+            <Static
+                machine={machine}
+                status={"En panne"} />
+
+                    <Static
+                machine={machine}
+                status = {"En fonctionnement"}
+            />
             
-   </>
-    )
+            <Static machine={machine}
+                status={"À l'arrêt"}/>
+
+            </>
+)
 }
-        
+
 export default Dashboard

@@ -7,21 +7,21 @@ const Nav= function () {
     
     return (
 
-        <>
+        <nav>
             <img src={Logo}/>
             
             <div className='sections'>  
     
                 <NavLink to="/">dashboard</NavLink>     
 
-                < NavLink to ="/machines">machines</NavLink> 
+                <NavLink to="/machines">machines</NavLink> 
 
                 <NavLink to="/machines/new">new machine</NavLink> 
 
                 <NavLink to="/kanban">/kanbas</NavLink>    
         
-</div>
-</>
+            </div>
+        </nav>
 )}
 
 export default Nav
