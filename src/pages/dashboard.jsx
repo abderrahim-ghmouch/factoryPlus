@@ -4,6 +4,8 @@ const Dashboard = function ({machine}) {
 
     return (
         <>
+            <div className="flex justify-around">
+
             <Static
                 machine={machine}
                 status={"En panne"} />
@@ -11,10 +13,11 @@ const Dashboard = function ({machine}) {
                     <Static
                 machine={machine}
                 status = {"En fonctionnement"}
-            />
+                />
             
             <Static machine={machine}
                 status={"À l'arrêt"}/>
+                </div>
 
             </>
 )
