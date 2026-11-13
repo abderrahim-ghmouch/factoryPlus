@@ -14,6 +14,7 @@ function App(){
 
   const [machine, setMachine] = useState([])
 
+  const Add=(m)=>{setMachine(list=>[...list,m])}
   useEffect(() => {
     fetch("/machine.json").then(res=>res.json()).then(data=>setMachine(data))
     },[])
@@ -31,7 +32,7 @@ function App(){
       
       <Route path='/machines' element={<Machine machine={machine}/>}/>
         
-      <Route path='/machines/new' element={<AddMachine machine={machine}/>}/>
+        <Route path='/add' element={<AddMachine onadd={Add} />}/>
       </Routes>
 </>
   )

@@ -16,7 +16,7 @@ const Nav= function () {
 
                 <NavLink to="/machines">machines</NavLink> 
 
-                <NavLink to="/machines/new">new machine</NavLink> 
+                <NavLink to="/add">new machine</NavLink> 
 
                 <NavLink to="/kanban">/kanbas</NavLink>    
         
