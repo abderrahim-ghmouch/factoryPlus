@@ -1,16 +1,59 @@
-# React + Vite
+<p align="center">
+  <img src="src/assets/navlogo.png" alt="FactoryPulse logo" width="160" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">FactoryPulse</h1>
 
-Currently, two official plugins are available:
+<p align="center">Tableau de bord pour suivre les machines d'une usine : statut, zone et production journalière.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fonctionnalités
 
-## React Compiler
+- Tableau de bord avec la vue d'ensemble des machines
+- Liste des machines avec recherche par nom et filtre par statut
+- Ajout d'une nouvelle machine via le formulaire `/machines/new` (en cours)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- React
+- React Router
+- Tailwind CSS
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+```bash
+npm install
+```
+
+## Lancer le projet
+
+```bash
+npm run dev
+```
+
+Puis ouvrez l'adresse affichée dans le terminal (par défaut `http://localhost:5173`).
+
+## Build de production
+
+```bash
+npm run build
+```
+
+## Structure
+
+```
+src/
+├── App.jsx              # Routes et état de la liste des machines
+├── pages/
+│   ├── dashboard.jsx    # Tableau de bord
+│   ├── machines.jsx     # Liste, recherche et filtre
+│   └── addMachine.jsx   # Formulaire d'ajout
+├── components/          # Card, Search, Filter, Nav
+└── assets/              # Images, dont le logo
+public/
+└── machine.json         # Données initiales des machines
+```
+
+## Données
+
+Les machines initiales sont chargées depuis `public/machine.json`. Les machines ajoutées depuis le formulaire restent en mémoire et disparaissent au rechargement de la page.
